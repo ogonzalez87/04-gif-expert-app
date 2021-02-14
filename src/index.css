@@ -17,3 +17,12 @@ input{
   width: 100%;
   color: grey;
 }
+
+.card{
+  align-content: center;
+  border: 1px solid gray;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
