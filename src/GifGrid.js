@@ -2,12 +2,11 @@ import React, { useEffect, useState } from "react";
 import { GifGridItem } from "./components/GifGridItem";
 
 export const GifGrid = ({ category }) => {
-  const [images, setImages] = useState();
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     getGifs();
-    return () => {};
-  }, []);
+  },[]);
 
   const getGifs = async () => {
     const url =
@@ -32,12 +31,10 @@ export const GifGrid = ({ category }) => {
     <div>
       <h3> {category} </h3>
 
-      {images.map((img) => (
-        <GifGridItem
-        id = {img.id}
-        {...img}
-        />
+      <li>Item</li>
 
+      {images.map((img) => (
+        <GifGridItem key={img.id} {...img} />
       ))}
     </div>
   );
