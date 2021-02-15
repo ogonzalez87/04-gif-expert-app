@@ -6,6 +6,9 @@ describe("<GifGridItem/>", () => {
   test("should load commponent", () => {
     const wrapper = shallow(<GifGridItem />);
 
+
+    
+
     expect(wrapper).toMatchSnapshot();
   });
 });
