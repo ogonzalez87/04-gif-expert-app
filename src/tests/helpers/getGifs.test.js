@@ -1,5 +1,5 @@
 import { shallow } from "enzyme";
-import { getGifs } from "../../../helpers/getGifs";
+import { getGifs } from "../../helpers/getGifs";
 
 describe("Test helpers getGifs Fetch", () => {
   const wrapper = shallow(<getGifs />);

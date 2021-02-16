@@ -26,8 +26,7 @@ describe("<GifGridItem/>", () => {
   test("should have fadein", () => {
     const div = wrapper.find("div");
 
-    // console.log( div.html());
-    console.log(div.prop("className"));
+    // console.log( div.html()); 
 
     const className = div.prop("className");
 
