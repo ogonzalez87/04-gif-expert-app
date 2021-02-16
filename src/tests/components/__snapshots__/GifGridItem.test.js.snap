@@ -4,9 +4,13 @@ exports[`<GifGridItem/> should load commponent 1`] = `
 <div
   className="card animate__animated animate__bounce"
 >
-  <img />
+  <img
+    alt="Un titulo"
+    src="google.com"
+  />
   <p>
      
+    Un titulo
      
   </p>
 </div>
