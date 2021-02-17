@@ -13,13 +13,6 @@ describe("<GifGridItem/>", () => {
   test("should load commponent", () => {
     expect(wrapper).toMatchSnapshot();
   });
-<<<<<<< HEAD
-
-  test("should have tittle", () => {
-    const p = wrapper.find("p");
-
-    expect(p.text().trim()).toBe(title);
-=======
 
   test("should work p", () => {
     const p = wrapper.find("p");
@@ -36,18 +29,14 @@ describe("<GifGridItem/>", () => {
   test("should have fadein", () => {
     const div = wrapper.find("div");
 
-    // console.log( div.html()); 
+    // console.log( div.html());
 
     const className = div.prop("className");
 
     expect(className.includes("animate__bounce")).toBe(true);
->>>>>>> f08c3ee30ceb030fc5ed63dac3c9031de4155439
   });
 
-  test('should have img with src and alt', () => {
-    const img= wrapper.find('img');
-
-    
-  })
-  
+  test("should have img with src and alt", () => {
+    const img = wrapper.find("img");
+  });
 });
