@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 import { AddCategory } from "../../components/AddCategory";
 describe("AddCategory", () => {
   const setCategories = jest.fn();
-  let wrapper ;
+  let wrapper;
 
   beforeEach(() => {
     jest.clearAllMocks();
@@ -28,10 +28,27 @@ describe("AddCategory", () => {
         console.log("handleSubmit");
       },
     });
-    
 
     expect(setCategories).not.toHaveBeenCalled();
   });
+
+  test("should call setCategories and clean the text box", () => {
+    const textbox = wrapper.find("input");
+    textbox.simulate("change", { target: { value: "Goku" } });
+
+    // simular inputChange
+    // simular el submit
+    wrapper.find("form").simulate("submit", {
+      preventDefault() {
+        // console.log(textbox.html());
+      },
+    });
+    // setCategories se debe haber llamado
+    expect(setCategories).toHaveBeenCalled();
+
+    expect(setCategories).toHaveBeenCalledWith(expect.any(Function));
+    // el valor del imput debe de estar vacio
+
+    expect(textbox.text()).toBe("");
+  });
 });
-
-

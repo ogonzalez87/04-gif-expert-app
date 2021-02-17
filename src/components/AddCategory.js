@@ -9,12 +9,12 @@ export const AddCategory = ({ setCategories }) => {
   };
   const handleSubmit = (e) => {
 
-    console.log('handleSubmit', inputValue);
+    // console.log('handleSubmit', inputValue);
     e.preventDefault();
 
     if (inputValue.trim().length > 2) {
       setCategories((cats) => [inputValue, ...cats]);
-      setInputValue("");
+      setInputValue(""); 
     }
   };
   return (
